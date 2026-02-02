@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+    :root {
+      --bg: #1a1b26;
+      --card: #24283b;
+      --accent: #7aa2f7;
+      --purple: #bb9af7;
+      --green: #9ece6a;
+      --red: #f7768e;
+      --text: #c0caf5;
+    }
+
+    /* Eltüntetjük a külső margót, hogy ne legyen dupla keret */
+    body { 
+      width: 320px; 
+      margin: 0;
+      padding: 0;
+      font-family: 'JetBrains Mono', monospace; 
+      background-color: var(--card); /* A kártya színe legyen az alap */
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    .coder-container {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(122, 162, 247, 0.1); /* Nagyon vékony, elegáns belső él */
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-red { background: var(--red); }
+    .dot-yellow { background: #e0af68; }
+    .dot-green { background: var(--green); }
+
+    h3 {
+      margin: 0;
+      font-size: 14px;
+      color: var(--purple);
+      text-transform: lowercase;
+    }
+
+    h3::before { content: "> "; color: var(--green); }
+
+    .input-box {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 2px solid #16161e;
+      background: #16161e;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      box-sizing: border-box;
+      outline: none;
+      margin-bottom: 15px;
+      transition: all 0.3s;
+    }
+
+    .input-box:focus {
+      border-color: var(--purple);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+
+    #loginBtn {
+      background: var(--purple);
+      color: var(--bg);
+      box-shadow: 0 4px 0px #9d7cd8;
+    }
+
+    #loginBtn:hover {
+      background: #c3a5f9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0px #9d7cd8;
+    }
+
+    #loginBtn:active {
+      transform: translateY(2px);
+      box-shadow: 0 0px 0px #9d7cd8;
+    }
+
+    #getBtn {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      margin-top: 5px;
+    }
+
+    #getBtn:hover {
+      background: rgba(122, 162, 247, 0.1);
+    }
+
+    #status {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 15px;
+      min-height: 15px;
+      font-style: italic;
+    }
+
+    .status-error { color: var(--red); }
+    .status-success { color: var(--green); }
+
+    .terminal-footer {
+      font-size: 9px;
+      text-align: center;
+      margin-top: 20px;
+      color: rgba(192, 202, 245, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="coder-container">
+    <div class="header">
+      <div class="dot dot-red"></div>
+      <div class="dot dot-yellow"></div>
+      <div class="dot dot-green"></div>
+      <h3>token_injector.sh</h3>
+    </div>
+    
+    <input type="password" id="tokenInput" class="input-box" placeholder="root@discord:~# enter_token">
+
+    <button id="loginBtn">execute_login()</button>
+    <button id="getBtn">fetch_local_token()</button>
+
+    <div id="status"></div>
+
+    <div class="terminal-footer">v1.1 // connection: stable</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
