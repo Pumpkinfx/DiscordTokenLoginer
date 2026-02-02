@@ -1,12 +1,12 @@
 # <p align="center">🛸 Discord Token Manager</p>
 
 <p align="center">
-  <img src="icon.png" width="128" height="128" alt="Logo">
+  <img src="./icon.png" width="128" height="128" alt="Logo">
   <br>
   <i>A minimalist, cozy-themed extension for power users.</i>
   <br>
   <img src="https://img.shields.io/badge/License-MIT-bb9af7?style=flat-square" alt="License">
-  <img src="https://img.shields.io/badge/Version-1.2-7aa2f7?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/Version-1.1-7aa2f7?style=flat-square" alt="Version">
   <img src="https://img.shields.io/badge/Style-Cozy%20Coder-9ece6a?style=flat-square" alt="Style">
 </p>
 
@@ -23,7 +23,7 @@ Tired of digging through the DevTools console? This extension brings a **pixel-p
 | **1** | **Download** | Clone or download this repo as a `.zip`. |
 | **2** | **Load** | Go to `chrome://extensions/` and enable **Developer Mode**. |
 | **3** | **Install** | Click **Load unpacked** and select the folder. |
-| **4** | **Pin** | Pin the 🛸 icon for instant access! |
+| **4** | **Pin** | Pin the icon for instant access! |
 
 ---
 
