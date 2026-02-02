@@ -1,39 +1,55 @@
-# DiscordTokenLoginer
-🛸 Discord Token Manager
-A minimalist, cozy-themed Chrome extension designed for developers and power users to manage their Discord authentication tokens with ease. No more messing around with the Inspect Element console.
+# <p align="center">🛸 Discord Token Manager</p>
 
-✨ Features
-Token Injection: Quickly switch between accounts by injecting an auth token.
+<p align="center">
+  <img src="icon.png" width="128" height="128" alt="Logo">
+  <br>
+  <i>A minimalist, cozy-themed extension for power users.</i>
+  <br>
+  <img src="https://img.shields.io/badge/License-MIT-bb9af7?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Version-1.2-7aa2f7?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/Style-Cozy%20Coder-9ece6a?style=flat-square" alt="Style">
+</p>
 
-Token Capture: Extract your current session's token with a single click.
+---
 
-Cozy UI: Beautiful "Tokyo Night" inspired pixel-art interface with smooth animations.
+### ✨ Overview
 
-Security First: No external database. Your data stays on your machine.
+Tired of digging through the DevTools console? This extension brings a **pixel-perfect terminal interface** right to your browser to manage your Discord sessions effortlessly.
 
-🚀 Installation (Developer Mode)
-Since this is a custom tool, you can install it manually:
+### 🚀 Quick Start
 
-Download or clone this repository to your local machine.
+| Step | Action | Description |
+| :--- | :--- | :--- |
+| **1** | **Download** | Clone or download this repo as a `.zip`. |
+| **2** | **Load** | Go to `chrome://extensions/` and enable **Developer Mode**. |
+| **3** | **Install** | Click **Load unpacked** and select the folder. |
+| **4** | **Pin** | Pin the 🛸 icon for instant access! |
 
-Open Chrome and navigate to chrome://extensions/.
+---
 
-Enable "Developer mode" in the top right corner.
+### 🛠️ Functionality
 
-Click "Load unpacked" and select the folder containing these files.
+* **`execute_login()`** → Injects your token and refreshes the page instantly.
+* **`fetch_local_token()`** → Safely retrieves your current token from local storage.
+* **Modern UI** → Tokyo Night color palette with a cozy pixel-art aesthetic.
 
-Pin the extension to your toolbar for quick access!
+---
 
-🛠️ Usage
-To Login: Paste your token into the enter_auth_token... field and click execute_login().
+### 🎨 Visual Theme
 
-To Extract: Click fetch_local_token() to copy your current token to the clipboard.
+The interface is inspired by the **Tokyo Night** color scheme:
+- `Background:` #24283b
+- `Accent:` #7aa2f7
+- `Typography:` JetBrains Mono
 
-⚠️ Warning: Never share your Discord token with anyone. It gives full access to your account. Use this tool responsibly!
+---
 
-🎨 Design Credits
-Theme: Tokyo Night / Cozy Coder
+### ⚠️ Security Notice
 
-Icons: Custom Pixel Art
+> **IMPORTANT:** Your token is your password. This extension works entirely locally; it never sends your data to any server. However, always be cautious about where you paste your tokens.
 
-Font: JetBrains Mono
+---
+
+<p align="center">
+  Made with 💜 for the Cozy Coding Community.
+</p>
